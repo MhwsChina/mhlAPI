@@ -2,7 +2,7 @@ from _mhlAPI import *
 from flask import *
 from os.path import exists,join
 import threading as th
-print('mhlAPI v0.0.1')
+print('mhlAPI v0.0.2')
 def pj(*args):
     return join(*args).replace('\\','/')
 a=input('1.是否循环补全文件?(y/n)')
@@ -49,4 +49,4 @@ def mc(path):
     else:
         return "{'code': 404,'text': 'file not found'}",404
 if b=='n':app.run(host='0.0.0.0',port=80)
-else:app.run(host='::1',port=80)
+else:app.run(host='::',port=80)
